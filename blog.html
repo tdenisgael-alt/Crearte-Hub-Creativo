@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Crearte Hub Creativo</title>
+    <meta name="description" content="Artículos y noticias sobre diseño, gestión de redes y marketing de Crearte Hub Creativo." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <link rel="stylesheet" href="css/blog-post.css" />
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a class="brand" href="index.html#inicio">
+          <img src="img/LOGOS CREARTE_Mesa de trabajo 1.png" alt="Logo de Crearte" />
+          <span>Crearte Hub Creativo</span>
+        </a>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="index.html#inicio">Inicio</a>
+          <a href="index.html#nosotros">Nosotros</a>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="blog" class="section section-muted">
+        <div class="container">
+          <div class="section-heading reveal fade-in is-visible">
+            <p class="eyebrow">Nuestro Blog</p>
+            <h2>Ideas y estrategias para tu marca</h2>
+          </div>
+
+          <!-- Artículo Principal Centrado -->
+          <div style="display: flex; justify-content: center; margin-bottom: 2.5rem;">
+            <div style="max-width: 780px; width: 100%;">
+              <a href="blog-post.html" class="blog-post-featured reveal zoom is-visible">
+                <img src="img/portada 2.jpg" alt="Personas colaborando en una estrategia de redes sociales" class="blog-post-image" />
+                <div class="blog-post-content">
+                  <span class="blog-post-category">Gestión de Redes</span>
+                  <h3>5 claves para una estrategia de contenido que conecta</h3>
+                  <p>Descubre cómo planificar y crear contenido que no solo atrae seguidores, sino que los convierte en clientes fieles a tu marca.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Artículos Secundarios -->
+          <div class="cards-grid" style="margin-bottom: 4rem;">
+            <a href="blog-post-design.html" class="blog-post-featured reveal slide-up is-visible">
+              <img src="img/identidad.jpg" alt="Manual de identidad de marca" class="blog-post-image" style="height: 160px;" />
+              <div class="blog-post-content" style="padding: 1.2rem;">
+                <span class="blog-post-category">Diseño</span>
+                <h4 style="font-size: 1.1rem;">El poder del diseño: Más que un logo bonito</h4>
+              </div>
+            </a>
+            <a href="#" class="blog-post-featured reveal slide-up is-visible">
+              <img src="img/activacion.jpg" alt="Evento de activación de marca" class="blog-post-image" style="height: 160px;" />
+              <div class="blog-post-content" style="padding: 1.2rem;">
+                <span class="blog-post-category">Activaciones</span>
+                <h4 style="font-size: 1.1rem;">Activaciones de marca: Cómo crear experiencias inolvidables</h4>
+              </div>
+            </a>
+            <a href="#" class="blog-post-featured reveal slide-up is-visible">
+              <img src="img/taza.jpg" alt="Taza y merchandising" class="blog-post-image" style="height: 160px;" />
+              <div class="blog-post-content" style="padding: 1.2rem;">
+                <span class="blog-post-category">Productos</span>
+                <h4 style="font-size: 1.1rem;">Merchandising que impacta: DTF vs. Sublimación</h4>
+              </div>
+            </a>
+          </div>
+
+          <!-- Separador y sección de portafolio -->
+          <hr style="border: none; height: 1px; background-color: rgba(0,0,0,0.1); margin: 1rem auto 4rem; width: 50%;">
+
+          <div class="section-heading reveal fade-in is-visible">
+            <p class="eyebrow">Nuestro Portafolio</p>
+            <h2>Trabajos Recientes</h2>
+          </div>
+
+          <!-- Filtros del Portafolio -->
+          <div class="portfolio-filters">
+            <button class="filter-btn is-active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="redes">Gestión de Redes</button>
+            <button class="filter-btn" data-filter="productos">Productos</button>
+            <button class="filter-btn" data-filter="activaciones">Activaciones</button>
+          </div>
+
+          <!-- Contenedor del Portafolio -->
+          <div class="cards-grid portfolio-items-grid">
+            <!-- Items de Gestión de Redes -->
+            <figure class="gallery-item" role="button" tabindex="0" data-category="redes">
+              <img src="img/identidad.jpg" alt="Ejemplo de gestión de redes 1" />
+              <figcaption>Proyecto de Redes 1</figcaption>
+            </figure>
+            <figure class="gallery-item" role="button" tabindex="0" data-category="redes">
+              <img src="img/portada 2.jpg" alt="Ejemplo de gestión de redes 2" />
+              <figcaption>Proyecto de Redes 2</figcaption>
+            </figure>
+            <figure class="gallery-item" role="button" tabindex="0" data-category="redes">
+              <img src="https://via.placeholder.com/400x300/F5EDE6/C74317?text=Imagen+3" alt="Espacio para imagen de gestión de redes 3" />
+              <figcaption>Proyecto de Redes 3</figcaption>
+            </figure>
+            <!-- Items de Productos -->
+            <figure class="gallery-item" role="button" tabindex="0" data-category="productos">
+              <img src="img/taza.jpg" alt="Ejemplo de producto 1" />
+              <figcaption>Producto 1</figcaption>
+            </figure>
+            <figure class="gallery-item" role="button" tabindex="0" data-category="productos">
+              <img src="img/camisa.png" alt="Ejemplo de producto 2" />
+              <figcaption>Producto 2</figcaption>
+            </figure>
+            <figure class="gallery-item" role="button" tabindex="0" data-category="productos">
+              <img src="https://via.placeholder.com/400x300/F5EDE6/C74317?text=Imagen+3" alt="Espacio para imagen de producto 3" />
+              <figcaption>Producto 3</figcaption>
+            </figure>
+            <!-- Items de Activaciones -->
+            <figure class="gallery-item" role="button" tabindex="0" data-category="activaciones">
+              <img src="img/activacion.jpg" alt="Ejemplo de activación 1" />
+              <figcaption>Activación 1</figcaption>
+            </figure>
+            <figure class="gallery-item" role="button" tabindex="0" data-category="activaciones">
+              <img src="https://via.placeholder.com/400x300/F5EDE6/C74317?text=Imagen+2" alt="Espacio para imagen de activación 2" />
+              <figcaption>Activación 2</figcaption>
+            </figure>
+            <figure class="gallery-item" role="button" tabindex="0" data-category="activaciones">
+              <img src="https://via.placeholder.com/400x300/F5EDE6/C74317?text=Imagen+3" alt="Espacio para imagen de activación 3" />
+              <figcaption>Activación 3</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container" style="text-align: center;">
+          <div class="section-heading reveal fade-in is-visible">
+            <p class="eyebrow">¿Listo para empezar?</p>
+            <h2>Hagamos que tu proyecto destaque</h2>
+            <p style="margin-top: 1rem; color: var(--color-text-secondary);">
+              Ya sea que necesites una estrategia de redes, un diseño impactante o una activación memorable, estamos aquí para ayudarte.
+            </p>
+          </div>
+          <a href="index.html#contacto" class="btn btn-primary">Contáctanos ahora</a>
+        </div>
+      </section>
+
+      <section class="section location-brand">
+        <div class="container location-brand-wrap">
+          <div class="brand-card">
+            <img src="img/LOGOS CREARTE_Mesa de trabajo 1.png" alt="Logo de Crearte" />
+
+            <div>
+              <p class="eyebrow">Marca</p>
+              <h3>Crearte Hub Creativo</h3>
+            </div>
+          </div>
+
+          <div class="location-image-card">
+            <img src="img/zona 1.png" alt="Vista de la zona de Crearte en Managua, Nicaragua" />
+          </div>
+
+          <div class="location-card">
+            <p class="eyebrow">Ubicación</p>
+            <h3>Managua, Nicaragua</h3>
+            <p>Estamos ubicados en 📍 El Barrio 1ro de Mayo, Tope Sur de Bello Horizonte, 20vrs al Sur, 2 cuadras al Este.</p>
+            <a href="https://maps.google.com/maps?q=12.1385879%2C-86.231329&z=17&hl=es" target="_blank" rel="noreferrer">Ver ubicación en Google Maps</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <p>© 2026 Crearte Hub Creativo. Todos los derechos reservados.</p>
+        <div class="footer-links">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Lightbox para la galería -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" aria-label="Cerrar imagen">&times;</button>
+      <div class="lightbox-content">
+        <img src="" alt="Imagen ampliada de la galería" class="lightbox-image" />
+        <p class="lightbox-caption"></p>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
