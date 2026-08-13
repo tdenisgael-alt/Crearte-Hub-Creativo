@@ -857,7 +857,7 @@ a {
   .blog-post-image {
     /* Altura más adecuada para las imágenes de blog en móviles */
     height: 200px;
-    object-fit: contain; /* Asegura que toda la imagen sea visible */
+    object-fit: cover; /* Rellena el espacio sin deformar la imagen */
   }
 }
 

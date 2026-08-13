@@ -42,7 +42,7 @@
 
 .article-image {
   width: 100%;
-  height: 420px;
+  height: auto; /* Cambiado para que la altura se ajuste al contenido */
   object-fit: cover;
   object-position: center top; /* Añadido: Enfoca la parte superior de la imagen */
   border-radius: var(--radius-lg);
