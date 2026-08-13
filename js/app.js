@@ -83,23 +83,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Lógica para el Lightbox de la galería ---
   const lightbox = document.getElementById('lightbox');
   if (lightbox) {
-    const galleryItems = document.querySelectorAll('.gallery-item');
     const lightboxImage = lightbox.querySelector('.lightbox-image');
     const lightboxCaption = lightbox.querySelector('.lightbox-caption');
     const closeButton = lightbox.querySelector('.lightbox-close');
+
+    // Seleccionamos todos los elementos que pueden abrir el lightbox
+    const triggerElements = document.querySelectorAll('.gallery-item, .lightbox-trigger');
 
     const closeLightbox = () => {
       lightbox.classList.remove('is-visible');
     };
 
-    galleryItems.forEach(item => {
+    triggerElements.forEach(item => {
       item.addEventListener('click', () => {
-        const img = item.querySelector('img');
-        const caption = item.querySelector('figcaption');
+        let imgSrc, imgAlt, captionText;
 
-        lightboxImage.src = img.src;
-        lightboxImage.alt = img.alt;
-        lightboxCaption.textContent = caption.textContent;
+        if (item.classList.contains('gallery-item')) {
+          // Lógica para los items de la galería
+          const img = item.querySelector('img');
+          const caption = item.querySelector('figcaption');
+          imgSrc = img.src;
+          imgAlt = img.alt;
+          captionText = caption.textContent;
+        } else {
+          // Lógica para otros triggers (como la imagen de ubicación)
+          imgSrc = item.src;
+          imgAlt = item.alt;
+          captionText = item.dataset.caption || ''; // Usamos data-caption
+        }
+
+        lightboxImage.src = imgSrc;
+        lightboxImage.alt = imgAlt;
+        lightboxCaption.textContent = captionText;
         lightbox.classList.add('is-visible');
       });
     });
@@ -162,5 +177,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
     });
+  }
+
+  // --- Lógica para activar el filtro desde la URL ---
+  const urlParams = new URLSearchParams(window.location.search);
+  const filterFromURL = urlParams.get('filter');
+
+  if (filterFromURL && filterContainer) {
+    const buttonToActivate = filterContainer.querySelector(`.filter-btn[data-filter="${filterFromURL}"]`);
+    if (buttonToActivate) {
+      buttonToActivate.click();
+    }
   }
 });
