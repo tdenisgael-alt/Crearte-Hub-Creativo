@@ -189,4 +189,32 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonToActivate.click();
     }
   }
+
+  // --- Lógica para pausar un video de Instagram al reproducir otro ---
+  const videoCards = document.querySelectorAll('.video-card');
+
+  if (videoCards.length > 1) {
+    // Función para recargar el iframe de un video, lo que lo detiene.
+    const pauseVideo = (card) => {
+      // Esperamos a que el script de Instagram cree el iframe.
+      setTimeout(() => {
+        const iframe = card.querySelector('iframe.instagram-media');
+        if (iframe) {
+          // Recargar el iframe para detener la reproducción.
+          iframe.src = iframe.src;
+        }
+      }, 100); // Un pequeño retardo para asegurar que el iframe exista.
+    };
+
+    videoCards.forEach((clickedCard, index) => {
+      clickedCard.addEventListener('click', () => {
+        // Cuando se hace clic en una tarjeta, pausamos los videos en las OTRAS tarjetas.
+        videoCards.forEach((otherCard, otherIndex) => {
+          if (index !== otherIndex) {
+            pauseVideo(otherCard);
+          }
+        });
+      });
+    });
+  }
 });

@@ -305,6 +305,28 @@ a {
   background: rgba(199, 67, 23, 0.04);
   font-weight: 600;
 }
+.video-placeholder .video-play-button {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.video-placeholder .video-play-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 20px solid var(--color-white);
+}
 
 .mission-vision-stack {
   display: grid;
